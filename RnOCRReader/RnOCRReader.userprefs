@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{29E9C518-F31A-42AA-83B8-70D3359A4341}|Default">
+  <MonoDevelop.Ide.ItemProperties.RnOCRReader.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.e5f23c4c0ce9e25f70209bfc3afba1ea87557adf" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="iOS/CaptureViewController.cs" Line="329" Column="7" />
+      <File FileName="iOS/Info.plist" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RnOCRReader" expanded="True" selected="True">
+            <Node name="RnOCRReader.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>tickCount</Value>
+          <Value>captureing</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Droid/RnOCRReader.Droid.csproj</String>
+  </DisabledProjects>
+</Properties>

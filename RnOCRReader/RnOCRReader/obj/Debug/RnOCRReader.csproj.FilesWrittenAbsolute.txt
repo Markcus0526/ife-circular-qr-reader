@@ -1,0 +1,5 @@
+/Users/administrator/Desktop/WORKS/PGCode_Workshop/Source/RnOCRReader/RnOCRReader/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile259.AssemblyAttribute.cs
+/Users/administrator/Desktop/WORKS/PGCode_Workshop/Source/RnOCRReader/RnOCRReader/bin/Debug/RnOCRReader.dll.mdb
+/Users/administrator/Desktop/WORKS/PGCode_Workshop/Source/RnOCRReader/RnOCRReader/bin/Debug/RnOCRReader.dll
+/Users/administrator/Desktop/WORKS/PGCode_Workshop/Source/RnOCRReader/RnOCRReader/obj/Debug/RnOCRReader.dll
+/Users/administrator/Desktop/WORKS/PGCode_Workshop/Source/RnOCRReader/RnOCRReader/obj/Debug/RnOCRReader.dll.mdb

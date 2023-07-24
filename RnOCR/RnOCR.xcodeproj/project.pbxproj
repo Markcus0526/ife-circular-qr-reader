@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3A11ADA1DB4AB5B00678ACA /* RnOCR.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A11AD91DB4AB5B00678ACA /* RnOCR.m */; };
+		C3A11ADB1DB4AB5B00678ACA /* RnOCR.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3A11AD81DB4AB5B00678ACA /* RnOCR.h */; };
+		C3A11AE91DB4AB9C00678ACA /* FindRecogDigit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3A11AE11DB4AB9C00678ACA /* FindRecogDigit.cpp */; };
+		C3A11AEA1DB4AB9C00678ACA /* ImageBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3A11AE31DB4AB9C00678ACA /* ImageBase.cpp */; };
+		C3A11AEB1DB4AB9C00678ACA /* uiimage2DIB.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A11AE81DB4AB9C00678ACA /* uiimage2DIB.m */; };
+		C3A11AEF1DB4ABB700678ACA /* myType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3A11AED1DB4ABB700678ACA /* myType.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C3A11AD31DB4AB5B00678ACA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				C3A11ADB1DB4AB5B00678ACA /* RnOCR.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C3A11AD51DB4AB5B00678ACA /* libRnOCR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRnOCR.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3A11AD81DB4AB5B00678ACA /* RnOCR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RnOCR.h; sourceTree = "<group>"; };
+		C3A11AD91DB4AB5B00678ACA /* RnOCR.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = RnOCR.m; sourceTree = "<group>"; };
+		C3A11AE11DB4AB9C00678ACA /* FindRecogDigit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FindRecogDigit.cpp; sourceTree = "<group>"; };
+		C3A11AE21DB4AB9C00678ACA /* FindRecogDigit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindRecogDigit.h; sourceTree = "<group>"; };
+		C3A11AE31DB4AB9C00678ACA /* ImageBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageBase.cpp; sourceTree = "<group>"; };
+		C3A11AE41DB4AB9C00678ACA /* ImageBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBase.h; sourceTree = "<group>"; };
+		C3A11AE61DB4AB9C00678ACA /* TRunProc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRunProc.h; sourceTree = "<group>"; };
+		C3A11AE71DB4AB9C00678ACA /* uiimage2DIB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiimage2DIB.h; sourceTree = "<group>"; };
+		C3A11AE81DB4AB9C00678ACA /* uiimage2DIB.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = uiimage2DIB.m; sourceTree = "<group>"; };
+		C3A11AED1DB4ABB700678ACA /* myType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = myType.cpp; path = Include/myType.cpp; sourceTree = "<group>"; };
+		C3A11AEE1DB4ABB700678ACA /* myType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myType.h; path = Include/myType.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3A11AD21DB4AB5B00678ACA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3A11ACC1DB4AB5B00678ACA = {
+			isa = PBXGroup;
+			children = (
+				C3A11AD71DB4AB5B00678ACA /* RnOCR */,
+				C3A11AD61DB4AB5B00678ACA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3A11AD61DB4AB5B00678ACA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3A11AD51DB4AB5B00678ACA /* libRnOCR.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3A11AD71DB4AB5B00678ACA /* RnOCR */ = {
+			isa = PBXGroup;
+			children = (
+				C3A11AEC1DB4ABA700678ACA /* Include */,
+				C3A11AE11DB4AB9C00678ACA /* FindRecogDigit.cpp */,
+				C3A11AE21DB4AB9C00678ACA /* FindRecogDigit.h */,
+				C3A11AE31DB4AB9C00678ACA /* ImageBase.cpp */,
+				C3A11AE41DB4AB9C00678ACA /* ImageBase.h */,
+				C3A11AE61DB4AB9C00678ACA /* TRunProc.h */,
+				C3A11AE71DB4AB9C00678ACA /* uiimage2DIB.h */,
+				C3A11AE81DB4AB9C00678ACA /* uiimage2DIB.m */,
+				C3A11AD81DB4AB5B00678ACA /* RnOCR.h */,
+				C3A11AD91DB4AB5B00678ACA /* RnOCR.m */,
+			);
+			path = RnOCR;
+			sourceTree = "<group>";
+		};
+		C3A11AEC1DB4ABA700678ACA /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				C3A11AED1DB4ABB700678ACA /* myType.cpp */,
+				C3A11AEE1DB4ABB700678ACA /* myType.h */,
+			);
+			name = Include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3A11AD41DB4AB5B00678ACA /* RnOCR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3A11ADE1DB4AB5B00678ACA /* Build configuration list for PBXNativeTarget "RnOCR" */;
+			buildPhases = (
+				C3A11AD11DB4AB5B00678ACA /* Sources */,
+				C3A11AD21DB4AB5B00678ACA /* Frameworks */,
+				C3A11AD31DB4AB5B00678ACA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RnOCR;
+			productName = RnOCR;
+			productReference = C3A11AD51DB4AB5B00678ACA /* libRnOCR.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3A11ACD1DB4AB5B00678ACA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Appsocks;
+				TargetAttributes = {
+					C3A11AD41DB4AB5B00678ACA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 6PMPP86CBM;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C3A11AD01DB4AB5B00678ACA /* Build configuration list for PBXProject "RnOCR" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C3A11ACC1DB4AB5B00678ACA;
+			productRefGroup = C3A11AD61DB4AB5B00678ACA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3A11AD41DB4AB5B00678ACA /* RnOCR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3A11AD11DB4AB5B00678ACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A11AEF1DB4ABB700678ACA /* myType.cpp in Sources */,
+				C3A11AEA1DB4AB9C00678ACA /* ImageBase.cpp in Sources */,
+				C3A11ADA1DB4AB5B00678ACA /* RnOCR.m in Sources */,
+				C3A11AEB1DB4AB9C00678ACA /* uiimage2DIB.m in Sources */,
+				C3A11AE91DB4AB9C00678ACA /* FindRecogDigit.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C3A11ADC1DB4AB5B00678ACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C3A11ADD1DB4AB5B00678ACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3A11ADF1DB4AB5B00678ACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 6PMPP86CBM;
+				OTHER_LDFLAGS = ObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C3A11AE01DB4AB5B00678ACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 6PMPP86CBM;
+				OTHER_LDFLAGS = ObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3A11AD01DB4AB5B00678ACA /* Build configuration list for PBXProject "RnOCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A11ADC1DB4AB5B00678ACA /* Debug */,
+				C3A11ADD1DB4AB5B00678ACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3A11ADE1DB4AB5B00678ACA /* Build configuration list for PBXNativeTarget "RnOCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A11ADF1DB4AB5B00678ACA /* Debug */,
+				C3A11AE01DB4AB5B00678ACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3A11ACD1DB4AB5B00678ACA /* Project object */;
+}

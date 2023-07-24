@@ -1,0 +1,3 @@
+/Users/administrator/Desktop/WORKS/PGCode_Workshop/Source/RnOCRReader/RnOCRBinding/obj/Release/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/administrator/Desktop/WORKS/PGCode_Workshop/Source/RnOCRReader/RnOCRBinding/bin/Release/RnOCRBinding.dll
+/Users/administrator/Desktop/WORKS/PGCode_Workshop/Source/RnOCRReader/RnOCRBinding/obj/Release/RnOCRBinding.dll
