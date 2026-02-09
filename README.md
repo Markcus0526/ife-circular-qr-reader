@@ -1,4 +1,4 @@
-# 🟢 RnOCRReader — Circular QR / Circular Code Recognition Engine
+# 🟢 Circular QR / Circular Code Recognition Engine
 
 <img width="375" height="643" alt="1" src="https://github.com/user-attachments/assets/56f1bd01-f85b-4cec-90a9-ca591865bf3c" />
 
