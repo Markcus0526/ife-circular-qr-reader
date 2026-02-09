@@ -1,45 +1,279 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# 🟢 RnOCRReader — Circular QR / Circular Code Recognition Engine
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+<img src="ios/Assets.xcassets/AppIcon.appiconset/Contents.json" alt="RnOCRReader logo (replace with screenshot)" style="display:none">
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
-
----
-
-## Edit a file
-
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+A mobile sample project (Xamarin C# + native engine) that demonstrates a circular QR / circular code recognition engine.  
+The core recognition engine is native C++/Objective‑C (FindRecogDigit + RnOCR) with Xamarin bindings so the app can call the engine from C#.
 
 ---
 
-## Create a file
+## 🧭 About
 
-Next, you’ll add a new file to this repository.
+RnOCRReader is a small demo application and library that:
+- Captures camera frames (iOS example: AVFoundation).
+- Crops the capture area and passes an image to a native circular QR/circular-code recognition engine.
+- Returns a short string result (UUID-like value) if recognition succeeds, or numeric error/status codes otherwise.
+- Provides a Xamarin binding to call the native engine from C# (iOS binding included).
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+The name RnOCR highlights its purpose: Recognition (Rn) — OCR-like pipeline for circular QR / circular-code style patterns.
 
 ---
 
-## Clone a repository
+## 📷 Screenshot
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+Replace the placeholder below with your screenshot file (commonly kept in `docs/` or `assets/`).
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+<img src="docs/screenshot.png" alt="Capture + recognition result (replace this path)" />
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+Tip: To create a screenshot use Xcode/Simulator or an iOS device and save to `docs/screenshot.png`, then commit it.
+
+---
+
+## ✨ Key Features
+
+- ✅ Native circular QR / circular-code recognition engine (C++/Objective‑C)
+- ✅ Prebuilt iOS static library included (libRnOCR.a)
+- ✅ Xamarin iOS binding (RnOCRBinding) — call engine from C#
+- ✅ Live camera capture + crop + recognition demo (CaptureViewController)
+- ✅ Cross-project layout: iOS app, Android shell, native engine source and build scripts
+
+---
+
+## 🚀 Quickstart
+
+Prerequisites:
+- macOS with Xcode (for building native engine and iOS app)
+- Visual Studio for Mac or Visual Studio (Windows) with Xamarin for C# projects
+- .NET / Xamarin toolchain installed
+- Optional: Android SDK & emulator for Android project
+
+### iOS — Build & Run (Xamarin.iOS)
+
+1. Open the solution:
+   - Open `ios/RnOCRReader.sln` in Visual Studio for Mac (or Visual Studio with Xamarin on macOS).
+2. Ensure the native static library is present:
+   - `ios/RnOCRBinding/libRnOCR.a` is already included (prebuilt). If you want to rebuild the native library from source, see the Native Engine section below.
+3. Add camera usage description:
+   - Before distributing on the App Store, add `NSCameraUsageDescription` to `ios/iOS/Info.plist` with a user-visible string. Example:
+     ```
+     <key>NSCameraUsageDescription</key>
+     <string>This app requires the camera to capture codes for recognition.</string>
+     ```
+4. Build & run on device (recommended) or simulator (simulator support requires the iOS simulator slice in lib):
+   - Select `RnOCRReader.iOS` project and run.
+
+Notes:
+- The sample's recognition is invoked in `ios/iOS/CaptureViewController.cs` via the binding:
+  ```csharp
+  string uuid = RnOCR.Recog(cropImage, rst: state);
+  ```
+  The method returns a short string (recognized ID) or numeric status codes.
+
+### Android — Build & Run (Xamarin.Android)
+
+1. Open the solution in Visual Studio.
+2. Android project is in `ios/Droid/`.
+3. Add camera permission to `ios/Droid/Properties/AndroidManifest.xml` (it currently lacks CAMERA):
+   ```xml
+   <uses-permission android:name="android.permission.CAMERA" />
+   <uses-feature android:name="android.hardware.camera" android:required="false" />
+   ```
+4. Implement native integration for the OCR engine on Android:
+   - The repository includes Android project scaffolding, but the native engine packaging for Android (.so or .aar) is not included. You will need to port or compile the engine into Android native libraries and call them through JNI or Xamarin bindings.
+
+---
+
+## 🛠 Native Engine — Build from source (iOS)
+
+The engine build script is here:
+- engine/library/Makefile
+
+It expects an Xcode project inside `engine/library/RnOCR` and will produce architecture-specific `.a` files and a fat library via `lipo`.
+
+Common commands (macOS + Xcode):
+```bash
+cd engine/library
+# Build per-arch and create a fat lib
+make libRnOCR.a
+
+# If you prefer manual steps, the Makefile uses xcodebuild and lipo:
+# xcodebuild -project ./RnOCR/RnOCR.xcodeproj -target RnOCR -sdk iphonesimulator -configuration Release clean build
+# xcodebuild -project ./RnOCR/RnOCR.xcodeproj -target RnOCR -sdk iphoneos -arch armv7 -configuration Release clean build
+# xcrun lipo -create -output libRnOCR.a [list of .a slices...]
+```
+
+Important notes:
+- The Makefile targets show a 3-slice build: i386 (simulator), armv7, arm64.
+- After building, copy the resulting fat `libRnOCR.a` into `ios/RnOCRBinding/` (or update your binding settings).
+
+---
+
+## 🔍 How Recognition Works (developer notes)
+
+- The Objective‑C wrapper `RnOCR` exposes:
+  ```objc
+  + (NSString *)recog:(UIImage *)img rstName:(NSString *)rst;
+  ```
+  (See: engine/library/RnOCR/RnOCR.h and .m)
+
+- The implementation converts a UIImage -> DIB -> gray image and calls the native recognizer:
+  - The recognizer entry point is `CFindRecogDigit::Find_RecogGrayImg(grayImg, w, h, uuid)`
+  - Present in `engine/library/RnOCR/FindRecogDigit.*`
+
+- Return values (observed behavior):
+  - returns `"2"`: special status (engine-specific)
+  - returns a string like `"..."` (UUID) on successful recognition (nret == 1)
+  - returns numeric string like `"-1"` or `"-2"` on errors (e.g., failure to convert image)
+
+- C# binding to call this from Xamarin:
+  ```csharp
+  // RnOCRBinding/ApiDefinition.cs exposes:
+  // [Export("recog:rstName:")] string Recog(UIImage img, string rst);
+  string result = RnOCR.Recog(croppedUIImage, rst: "");
+  ```
+
+---
+
+## 🧩 Project Structure (deep level)
+
+Root (top-level)
+- ios/
+  - RnOCRReader.sln — Visual Studio solution (iOS + Android + binding)
+  - RnOCRReader/ — shared portable class library
+  - RnOCRReader.iOS/ — iOS app project
+    - AppDelegate.cs — app lifecycle
+    - Main.cs — app entry
+    - CaptureViewController.cs — camera capture and recognition logic (core demo)
+    - Info.plist — App configuration (add NSCameraUsageDescription here)
+    - LaunchScreen.storyboard / Main.storyboard — UI
+    - Assets.xcassets — app icons (replace screenshot here)
+  - RnOCRBinding/ — Xamarin.iOS binding project
+    - ApiDefinition.cs — binding interface for RnOCR
+    - Structs.cs — any required native struct mappings
+    - libRnOCR.a — prebuilt native library (static)
+    - libRnOCR.linkwith.cs — binding characteristics for the native lib
+- engine/
+  - library/
+    - Makefile — build script for native iOS static libs (xcodebuild + lipo)
+    - RnOCR/ — Xcode project implementing the native engine
+      - RnOCR.h / RnOCR.m — Objective-C wrapper
+      - FindRecogDigit.cpp / .h — core recognition logic (C++ code)
+      - ImageBase.*, uiimage2DIB.* — helpers for image conversion and processing
+    - ApiDefinitions.cs — (duplicate binding template, used in some workflows)
+  - result/
+    - libRnOCR-*.a — example or older build outputs
+- windows/
+  - demo/ — Windows demo code with a lot of third party imaging libs (CxImage, libjpeg, png, zlib, etc.)
+  - dll/TestDll/ — example DLL wrapper for windows platform
+- ios/Droid/
+  - MainActivity.cs — Android sample launcher/activity
+  - Properties/AndroidManifest.xml — android manifest (add CAMERA permission)
+- Misc vendor folders: `windows/demo/CxImage/`, contains imaging codecs used by engine or demo.
+
+Important engine files to review:
+- engine/library/RnOCR/RnOCR.m — bridge from UIImage -> DIB -> C++ recognizer
+- engine/library/RnOCR/FindRecogDigit.* — recognition algorithm
+- engine/library/Include/myType.h — shared type definitions used by the engine
+
+---
+
+## 🧰 Tech Stack & Libraries
+
+- Languages:
+  - Objective‑C (iOS glue)
+  - C / C++ (recognition engine)
+  - C# (Xamarin / UI)
+- Mobile frameworks:
+  - iOS: AVFoundation, UIKit
+  - Xamarin.iOS, Xamarin.Android (C#)
+- Build tools:
+  - Xcode / xcodebuild, lipo (native)
+  - Visual Studio / MSBuild (Xamarin)
+- Libraries & third-party code (included under windows/demo/CxImage and engine):
+  - CxImage, libjpeg, libpng, libtiff, zlib, Jasper (some older image codec code appears in repo)
+- Binding:
+  - Xamarin Objective-C binding (ApiDefinition.cs / RnOCRBinding)
+
+---
+
+## ✅ Usage Examples
+
+C# (Xamarin.iOS)
+```csharp
+// CaptureViewController.cs excerpt:
+// After cropping to a UIImage `cropImage`:
+string result = RnOCR.Recog(cropImage, rst: "");
+if (result.Length > 2) {
+    // success — result is the recognized ID string
+    lblResult.Text = result;
+} else {
+    // failure or special status; engine returns strings like "2" or "-1"
+    lblResult.Text = "";
+}
+```
+
+Objective‑C (native call, if consuming RnOCR directly)
+```objc
+#import "RnOCR.h"
+UIImage *image = ...; // your UIImage
+NSString *result = [RnOCR recog:image rstName:@""];
+if (result.length > 2) {
+    NSLog(@"Recognized: %@", result);
+} else {
+    NSLog(@"Status/Error: %@", result);
+}
+```
+
+---
+
+## ⚠️ Platform Notes & Known Issues
+
+- iOS privacy: Info.plist must include NSCameraUsageDescription (and NSPhotoLibraryAddUsageDescription if saving).
+- Android: `ios/Droid/Properties/AndroidManifest.xml` currently does not include CAMERA permission. Add:
+  ```xml
+  <uses-permission android:name="android.permission.CAMERA" />
+  ```
+- Prebuilt library: `ios/RnOCRBinding/libRnOCR.a` is included, but if you have a mismatched architecture you must rebuild using the Makefile and ensure the fat library contains simulator and device slices.
+- Android engine: Native Android library (.so) is not included. Port/compile the engine for Android separately if you need Android native recognition.
+
+---
+
+## 🔭 Future Roadmap (Table)
+
+| Feature / Improvement | Status | Priority | Notes |
+|---|---:|---:|---|
+| Add NSCameraUsageDescription to Info.plist | Needed | High | Required for App Store and runtime camera access |
+| Add Android native library (.so) + JNI binding | Planned | High | Enables recognition on Android devices |
+| Improve recognition accuracy & testing dataset | Planned | Medium | Add more test images & unit tests for recognition |
+| Add CI builds (macOS) for native engine | Planned | Medium | Automate building lib for supported archs |
+| Add sample images & screenshots to docs | Planned | Low | Makes README screenshot section richer |
+| Convert native engine to a packaged cross-platform lib | Idea | Low | e.g., CMake build, produce .a/.so for multiple platforms |
+
+---
+
+## 🤝 Contributing
+
+- Fork the repo and open a pull request with a clear description.
+- If you change the native engine, please document how to rebuild and include the new slices in `libRnOCR.a`.
+- For Android support: propose a strategy (JNI wrapper, or port engine to CMake) and include build instructions.
+
+---
+
+## 📜 License
+
+This repository does not contain an explicit license file. Add a LICENSE to clarify the terms (MIT, Apache‑2.0, etc.) before public distribution.
+
+---
+
+## 📬 Contact / Help
+
+If you need help:
+- Open an issue in this repository with detailed logs and platform info.
+- Include sample images that cause recognition problems (if accuracy work is required).
+
+---
+
+Thank you for sharing your project — the circular QR / circular-code recognition engine is an interesting and reusable piece. If you want, I can:
+- Add an example screenshot to the repo and update README image path.
+- Draft the Android JNI wrapper outline to integrate the engine on Android.
+- Propose unit tests and a basic CI script to build the fat lib automatically.
