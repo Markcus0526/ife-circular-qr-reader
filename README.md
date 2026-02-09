@@ -1,6 +1,5 @@
 # 🟢 RnOCRReader — Circular QR / Circular Code Recognition Engine
 
-<img src="ios/Assets.xcassets/AppIcon.appiconset/Contents.json" alt="RnOCRReader logo (replace with screenshot)" style="display:none">
 <img width="375" height="643" alt="1" src="https://github.com/user-attachments/assets/56f1bd01-f85b-4cec-90a9-ca591865bf3c" />
 
 
@@ -23,11 +22,10 @@ The name RnOCR highlights its purpose: Recognition (Rn) — OCR-like pipeline fo
 
 ## 📷 Screenshot
 
-Replace the placeholder below with your screenshot file (commonly kept in `docs/` or `assets/`).
-
-<img src="docs/screenshot.png" alt="Capture + recognition result (replace this path)" />
-
-Tip: To create a screenshot use Xcode/Simulator or an iOS device and save to `docs/screenshot.png`, then commit it.
+<img width="1629" height="640" alt="qr code image samples" src="https://github.com/user-attachments/assets/8a734605-3258-46af-8ff1-c39617e09c4b" />
+<img width="500" height="500" alt="qr_code_arc_numbers" src="https://github.com/user-attachments/assets/bb0e4c3a-7b66-447c-86d3-3e7001840e6c" />
+<img width="500" height="500" alt="qr_code_example" src="https://github.com/user-attachments/assets/6332b31d-30b6-4e14-9d1f-24f4e389bc0c" />
+<img width="500" height="500" alt="qr_code_pattern" src="https://github.com/user-attachments/assets/178858d6-597d-4f3f-89a9-1c8cd9edad5e" />
 
 ---
 
