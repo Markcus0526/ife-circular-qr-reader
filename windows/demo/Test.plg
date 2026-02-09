@@ -1,0 +1,92 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Test - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP55.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /Fp"../Temp/Release/Test.pch" /Yu"stdafx.h" /Fo"../Temp/Release/" /Fd"../Temp/Release/" /FD /c 
+"D:\Main Projects\Test Demo\Src\BaseClass\Binarization.cpp"
+"D:\Main Projects\Test Demo\Src\DirDialog.cpp"
+"D:\Main Projects\Test Demo\Src\BaseClass\Histogram.cpp"
+"D:\Main Projects\Test Demo\Src\BaseClass\ImageBase.cpp"
+"D:\Main Projects\Test Demo\Src\ImageDoc.cpp"
+"D:\Main Projects\Test Demo\Src\BaseClass\ImageFilter.cpp"
+"D:\Main Projects\Test Demo\Src\ImageFrame.cpp"
+"D:\Main Projects\Test Demo\Src\BaseClass\ImageIO.cpp"
+"D:\Main Projects\Test Demo\Src\ImageView.cpp"
+"D:\Main Projects\Test Demo\Src\MainFrame.cpp"
+"D:\Main Projects\Test Demo\Src\MainToolBar.cpp"
+"D:\Main Projects\Test Demo\Src\BaseClass\Morpho.cpp"
+"D:\Main Projects\Test Demo\Src\ResultView.cpp"
+"D:\Main Projects\Test Demo\Src\Test.cpp"
+"D:\Main Projects\Test Demo\Src\ToolBarEx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP55.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP56.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /Fp"../Temp/Release/Test.pch" /Yc"stdafx.h" /Fo"../Temp/Release/" /Fd"../Temp/Release/" /FD /c 
+"D:\Main Projects\Test Demo\Src\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP56.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP57.tmp" with contents
+[
+/nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"../Temp/Release/Test.pdb" /machine:I386 /nodefaultlib:"libc.lib" /out:"../Bin/Test.exe" /libpath:"..\Lib\CxImage\Lib\Release" /libpath:"..\Bin" 
+"\Main Projects\Test Demo\Temp\Release\Binarization.obj"
+"\Main Projects\Test Demo\Temp\Release\DirDialog.obj"
+"\Main Projects\Test Demo\Temp\Release\Histogram.obj"
+"\Main Projects\Test Demo\Temp\Release\ImageBase.obj"
+"\Main Projects\Test Demo\Temp\Release\ImageDoc.obj"
+"\Main Projects\Test Demo\Temp\Release\ImageFilter.obj"
+"\Main Projects\Test Demo\Temp\Release\ImageFrame.obj"
+"\Main Projects\Test Demo\Temp\Release\ImageIO.obj"
+"\Main Projects\Test Demo\Temp\Release\ImageView.obj"
+"\Main Projects\Test Demo\Temp\Release\MainFrame.obj"
+"\Main Projects\Test Demo\Temp\Release\MainToolBar.obj"
+"\Main Projects\Test Demo\Temp\Release\Morpho.obj"
+"\Main Projects\Test Demo\Temp\Release\ResultView.obj"
+"\Main Projects\Test Demo\Temp\Release\StdAfx.obj"
+"\Main Projects\Test Demo\Temp\Release\Test.obj"
+"\Main Projects\Test Demo\Temp\Release\ToolBarEx.obj"
+"\Main Projects\Test Demo\Temp\Release\Test.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP57.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Automatically linking with Jpeg.lib
+Automatically linking with Tiff.lib
+Automatically linking with zlib.lib
+Automatically linking with png.lib
+Automatically linking with j2k.lib
+Automatically linking with jasper.lib
+Automatically linking with jbig.lib
+Compiling...
+Binarization.cpp
+DirDialog.cpp
+Histogram.cpp
+ImageBase.cpp
+ImageDoc.cpp
+ImageFilter.cpp
+ImageFrame.cpp
+ImageIO.cpp
+ImageView.cpp
+MainFrame.cpp
+MainToolBar.cpp
+Morpho.cpp
+ResultView.cpp
+Test.cpp
+ToolBarEx.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Test.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
