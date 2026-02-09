@@ -1,6 +1,8 @@
 # 🟢 RnOCRReader — Circular QR / Circular Code Recognition Engine
 
 <img src="ios/Assets.xcassets/AppIcon.appiconset/Contents.json" alt="RnOCRReader logo (replace with screenshot)" style="display:none">
+<img width="375" height="643" alt="1" src="https://github.com/user-attachments/assets/56f1bd01-f85b-4cec-90a9-ca591865bf3c" />
+
 
 A mobile sample project (Xamarin C# + native engine) that demonstrates a circular QR / circular code recognition engine.  
 The core recognition engine is native C++/Objective‑C (FindRecogDigit + RnOCR) with Xamarin bindings so the app can call the engine from C#.
@@ -261,7 +263,7 @@ if (result.length > 2) {
 
 ## 📜 License
 
-This repository does not contain an explicit license file. Add a LICENSE to clarify the terms (MIT, Apache‑2.0, etc.) before public distribution.
+This project is licensed under the MIT License — see [LICENSE](LICENSE).
 
 ---
 
